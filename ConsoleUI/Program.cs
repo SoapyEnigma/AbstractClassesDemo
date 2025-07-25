@@ -33,12 +33,44 @@ namespace ConsoleUI
             */
 
             // Create a list of Vehicle called vehicles
+            List<Vehicle> list = new List<Vehicle>();
 
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
              * 
              * Set the properties values with object initializer syntax
              */
+            Car mr2 = new Car()
+            {
+                Make = "Toyota",
+                Model = "MR2",
+                Year = "2000",
+                HasTrunk = false
+            };
+
+            Motorcycle scout = new Motorcycle()
+            {
+                Make = "Indian",
+                Model = "Scout",
+                Year = "2025",
+                HasSideCar = false
+            };
+
+            Vehicle civic = new Car()
+            {
+                Make = "Honda",
+                Model = "Civic",
+                Year = "1990",
+                HasTrunk = true
+            };
+
+            Vehicle goldWing = new Motorcycle()
+            {
+                Make = "Honda",
+                Model = "Gold Wing",
+                Year = "2024",
+                HasSideCar = true
+            };
 
             /*
              * Add the 4 vehicles to the list
