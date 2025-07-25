@@ -48,6 +48,8 @@ namespace ConsoleUI
                 HasTrunk = false
             };
 
+            list.Add(mr2);
+
             Motorcycle scout = new Motorcycle()
             {
                 Make = "Indian",
@@ -55,6 +57,8 @@ namespace ConsoleUI
                 Year = "2025",
                 HasSideCar = false
             };
+
+            list.Add(scout);
 
             Vehicle civic = new Car()
             {
@@ -64,6 +68,8 @@ namespace ConsoleUI
                 HasTrunk = true
             };
 
+            list.Add(civic);
+
             Vehicle goldWing = new Motorcycle()
             {
                 Make = "Honda",
@@ -72,12 +78,30 @@ namespace ConsoleUI
                 HasSideCar = true
             };
 
+            list.Add(goldWing);
+
             /*
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate through the list and display each of the properties
              */
 
+            foreach (Vehicle v in list)
+            {
+                Console.Write($"{v.Year} {v.Make} {v.Model}");
+
+                if (v is Car car)
+                    Console.WriteLine(car.HasTrunk ? " with a trunk.\n" : " without a trunk.\n");
+
+                if (v is Motorcycle motorcycle)
+                    Console.WriteLine(motorcycle.HasSideCar ? " with a sidecar.\n" : " without a sidecar.\n");
+            }
+
             // Call each of the drive methods for one car and one motorcycle
+            mr2.DriveAbstract();
+            mr2.DriveVirtual();
+
+            goldWing.DriveAbstract();
+            goldWing.DriveVirtual();
 
             #endregion            
             Console.ReadLine();

@@ -18,7 +18,7 @@ namespace ConsoleUI
 
         public virtual void DriveVirtual()
         {
-            Console.WriteLine("Virtually Driving!");
+            Console.WriteLine("Virtually Driving a vehicle!");
         }
     }
 }
